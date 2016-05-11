@@ -12,8 +12,6 @@ def index(request):
         form = WebsiteInputForm(request.POST)
         if form.is_valid():
             form.save()
-            print "********************************************"
-            print form
             return HttpResponse("Success")
         else:
             messages.error(request, "Error")
