@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'checks.apps.ChecksConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -77,11 +78,11 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'USER': 'mydatabaseuser',
-        'NAME': 'mydatabase',
-        'TEST': {
-            'NAME': 'mytestdatabase',
-        },
+        'NAME': 'checkerdb',
+        # 'USER': 'adminuser',
+        # 'PASSWORD': 'adminuser',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 

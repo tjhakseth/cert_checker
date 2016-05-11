@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Certification Checker</h1>
+
+    <h3>Are you up to date??</h3>
+    <h3>Check your site below</h3>
+    <form action="{% url 'index' %}" method="POST" class="url-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+  
+
+{% endblock %}
